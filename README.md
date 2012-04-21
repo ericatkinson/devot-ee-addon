@@ -11,7 +11,7 @@ Changelog
 1.0.4 - Apr 19 2012
 
 * Bug fix for incorrect accessory listing.  Issue #12
-* Updated accessory to only display change log if an update is available.
+* Release notes are no longer shown for up-to-date add-ons
 
 1.0.3 - Apr 19 2012
 

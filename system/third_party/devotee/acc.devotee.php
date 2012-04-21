@@ -16,7 +16,7 @@ class Devotee_acc {
 	 */
 	public $name = 'devot:ee';
 	public $id = 'devot-ee';
-	public $version = '1.0.3';
+	public $version = '1.0.4';
 	public $description = 'Monitor your add-ons for updates.';
 	public $sections = array();
 
@@ -64,7 +64,7 @@ class Devotee_acc {
 		// create cache folder if it doesn't exist
 		if(!is_dir($this->_cache_path))
 		{
-			mkdir($this->_cache_path, 0777);
+			mkdir($this->_cache_path, DIR_WRITE_MODE);
 		}
 
 		// set theme url
@@ -203,13 +203,10 @@ class Devotee_acc {
 					// we need to load the class if not devotee to get more info
 					if($package != 'devotee')
 					{
-						$acc_path = PATH_THIRD.strtolower($package).'/';
-
-						if(class_exists($acc_path))
+						if( ! class_exists($addon['class']))
 						{
-							$this->EE->load->add_package_path($acc_path, FALSE);
+							require_once PATH_THIRD."{$package}/acc.{$package}.php";
 							$acc = new $addon['class']();
-							$this->EE->load->remove_package_path($acc_path);
 						}
 					}
 					// if devotee accessory, we already have the info!

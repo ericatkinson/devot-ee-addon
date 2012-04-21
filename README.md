@@ -8,7 +8,12 @@ This add-on was a joint effort between Masuga Design/devot:ee, EE Coder, and Ant
 
 Changelog
 
-*1.0.3* - Apr 19 2012
+1.0.4 - Apr 19 2012
+
+* Bug fix for incorrect accessory listing.  Issue #12
+* Updated accessory to only display change log if an update is available.
+
+1.0.3 - Apr 19 2012
 
 * New lines to br tags in release notes
 * Fix search links

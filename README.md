@@ -8,6 +8,9 @@ This add-on was a joint effort between Masuga Design/devot:ee, EE Coder, and Ant
 
 Changelog
 
+1.0.5 - April 24 2012
+* Bug fix for incorrect accessory listing.  Issue #12
+
 1.0.4 - Apr 19 2012
 
 * Bug fix for incorrect accessory listing.  Issue #12

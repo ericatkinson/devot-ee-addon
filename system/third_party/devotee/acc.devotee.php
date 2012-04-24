@@ -206,8 +206,9 @@ class Devotee_acc {
 						if( ! class_exists($addon['class']))
 						{
 							require_once PATH_THIRD."{$package}/acc.{$package}.php";
-							$acc = new $addon['class']();
 						}
+
+						$acc = new $addon['class']();
 					}
 					// if devotee accessory, we already have the info!
 					else
@@ -222,6 +223,8 @@ class Devotee_acc {
 					if(isset($acc))
 					{
 						$this->_set_addon_info($package, $acc->name, $acc->version, $types);
+
+						unset($acc);
 					}
 				}
 			}
